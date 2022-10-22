@@ -1,0 +1,392 @@
+$date
+	Thu Oct 20 22:32:39 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Exe_mem $end
+$var wire 16 ! ALU_output [15:0] $end
+$var wire 1 " checkwdata $end
+$var wire 1 # clkwire $end
+$var wire 4 $ dest_reg_wire [3:0] $end
+$var wire 4 % instruction [3:0] $end
+$var wire 4 & instruction_4_bits [3:0] $end
+$var wire 8 ' instrwire [7:0] $end
+$var wire 4 ( ldst [3:0] $end
+$var wire 4 ) memwire [3:0] $end
+$var wire 8 * npc [7:0] $end
+$var wire 8 + npc_out [7:0] $end
+$var wire 16 , reg_data_1_wire [15:0] $end
+$var wire 16 - reg_data_2_wire [15:0] $end
+$var wire 4 . regdest [3:0] $end
+$var wire 1 / regnum $end
+$var wire 16 0 wdata [15:0] $end
+$var reg 16 1 aluoutput [15:0] $end
+$var reg 1 2 clk $end
+$var reg 20 3 current_instruction [19:0] $end
+$var reg 8 4 imm [7:0] $end
+$var reg 4 5 inst [3:0] $end
+$var reg 4 6 instructioni [3:0] $end
+$var reg 4 7 ldsti [3:0] $end
+$var reg 4 8 linenum [3:0] $end
+$var reg 8 9 npc_in [7:0] $end
+$var reg 8 : npci [7:0] $end
+$var reg 16 ; op1 [15:0] $end
+$var reg 16 < op2 [15:0] $end
+$var reg 4 = regdesti [3:0] $end
+$var reg 4 > registernum [3:0] $end
+$var reg 16 ? regwire1 [15:0] $end
+$var reg 16 @ regwire2 [15:0] $end
+$var reg 16 A regwire3 [15:0] $end
+$var reg 16 B regwire4 [15:0] $end
+$var reg 16 C regwire5 [15:0] $end
+$var reg 16 D regwire6 [15:0] $end
+$var reg 16 E regwire7 [15:0] $end
+$var reg 16 F regwire8 [15:0] $end
+$scope module S2 $end
+$var wire 1 # clkwire $end
+$var wire 20 G current_instruction [19:0] $end
+$var wire 4 H dest_reg_wire [3:0] $end
+$var wire 4 I instruction_4_bits [3:0] $end
+$var wire 8 J instrwire [7:0] $end
+$var wire 4 K memwire [3:0] $end
+$var wire 8 L npc_in [7:0] $end
+$var wire 8 M npc_out [7:0] $end
+$var wire 16 N reg_data_1_wire [15:0] $end
+$var wire 16 O reg_data_2_wire [15:0] $end
+$var wire 16 P regwire1 [15:0] $end
+$var wire 16 Q regwire2 [15:0] $end
+$var wire 16 R regwire3 [15:0] $end
+$var wire 16 S regwire4 [15:0] $end
+$var wire 16 T regwire5 [15:0] $end
+$var wire 16 U regwire6 [15:0] $end
+$var wire 16 V regwire7 [15:0] $end
+$var wire 16 W regwire8 [15:0] $end
+$var reg 16 X dest_reg [15:0] $end
+$var reg 20 Y instr [19:0] $end
+$var reg 8 Z instr_line_no [7:0] $end
+$var reg 4 [ mem_line_no [3:0] $end
+$var reg 8 \ npc [7:0] $end
+$var reg 4 ] opcode [3:0] $end
+$var reg 16 ^ r1 [15:0] $end
+$var reg 16 _ r2 [15:0] $end
+$var reg 16 ` r3 [15:0] $end
+$var reg 16 a r4 [15:0] $end
+$var reg 16 b r5 [15:0] $end
+$var reg 16 c r6 [15:0] $end
+$var reg 16 d r7 [15:0] $end
+$var reg 16 e r8 [15:0] $end
+$var reg 16 f reg_data_1 [15:0] $end
+$var reg 16 g reg_data_2 [15:0] $end
+$upscope $end
+$scope module dut $end
+$var wire 16 h aluoutput [15:0] $end
+$var wire 1 " checkwritedata $end
+$var wire 1 # clkwire $end
+$var wire 4 i instruction [3:0] $end
+$var wire 4 j linenum [3:0] $end
+$var wire 4 k registernum [3:0] $end
+$var wire 1 / regnum $end
+$var wire 16 l writedata [15:0] $end
+$var integer 32 m a [31:0] $end
+$var reg 1 n checkbool $end
+$var integer 32 o fd [31:0] $end
+$var reg 5 p i [4:0] $end
+$var reg 4 q regno [3:0] $end
+$var reg 16 r val [15:0] $end
+$upscope $end
+$scope module dut2 $end
+$var wire 16 s ALU_output [15:0] $end
+$var wire 1 # clkwire $end
+$var wire 8 t imm [7:0] $end
+$var wire 4 u instruction [3:0] $end
+$var wire 4 v instructioni [3:0] $end
+$var wire 4 w ldst [3:0] $end
+$var wire 4 x ldsti [3:0] $end
+$var wire 8 y npc [7:0] $end
+$var wire 8 z npci [7:0] $end
+$var wire 16 { op1 [15:0] $end
+$var wire 16 | op2 [15:0] $end
+$var wire 4 } regdest [3:0] $end
+$var wire 4 ~ regdesti [3:0] $end
+$var reg 16 !" ALU_result [15:0] $end
+$var reg 4 "" instruction_reg [3:0] $end
+$var reg 4 #" ldsti_reg [3:0] $end
+$var reg 4 $" npc_reg [3:0] $end
+$var reg 4 %" regdesti_reg [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx %"
+bx $"
+bx #"
+bx ""
+bx !"
+bx ~
+bx }
+bx |
+bx {
+bx z
+b0xxxx y
+bx x
+bx w
+bx v
+bx u
+bx t
+bx s
+bx r
+bx q
+b10000 p
+b10000000000000000000000000000011 o
+0n
+b1 m
+bx l
+bx k
+bx j
+bx i
+bx h
+bx g
+bx f
+bx e
+bx d
+bx c
+bx b
+bx a
+bx `
+bx _
+bx ^
+bx ]
+bx \
+bx [
+bx Z
+bx Y
+bx X
+b1100 W
+b1011 V
+b1010 U
+b1001 T
+b1000 S
+b111 R
+b110 Q
+b101 P
+bx O
+bx N
+bx M
+b10 L
+bx K
+bx J
+bx I
+bx H
+b110000001000000000 G
+b1100 F
+b1011 E
+b1010 D
+b1001 C
+b1000 B
+b111 A
+b110 @
+b101 ?
+bx >
+bx =
+bx <
+bx ;
+bx :
+b10 9
+bx 8
+bx 7
+bx 6
+bx 5
+bx 4
+b110000001000000000 3
+02
+bx 1
+bx 0
+x/
+bx .
+bx -
+bx ,
+bx +
+b0xxxx *
+bx )
+bx (
+bx '
+bx &
+bx %
+bx $
+0#
+0"
+bx !
+$end
+#5
+b0 $
+b0 H
+b0 g
+b0 -
+b0 O
+b10 f
+b10 ,
+b10 N
+b0 Z
+b0 '
+b0 J
+b0 X
+b10 [
+b10 )
+b10 K
+b11 ]
+b11 &
+b11 I
+b10 \
+b10 +
+b10 M
+b110000001000000000 Y
+b1100 e
+b1011 d
+b1010 c
+b1001 b
+b1000 a
+b111 `
+b110 _
+b101 ^
+12
+1#
+#10
+b0 4
+b0 t
+b11 6
+b11 v
+b0 =
+b0 ~
+b10 :
+b10 z
+b10 7
+b10 x
+b0 <
+b0 |
+b10 ;
+b10 {
+02
+0#
+b1000110011100000000 3
+b1000110011100000000 G
+#15
+b110 $
+b110 H
+b0 %"
+b0 .
+b0 }
+b10 #"
+b10 (
+b10 w
+b10 $"
+b10 *
+b10 y
+b11 ""
+b11 %
+b11 u
+b1011 f
+b1011 ,
+b1011 N
+b110 X
+b111 [
+b111 )
+b111 K
+b100 ]
+b100 &
+b100 I
+b1000110011100000000 Y
+12
+1#
+#20
+b0 >
+b0 k
+b10 8
+b10 j
+b11 5
+b11 i
+b100 6
+b100 v
+b110 =
+b110 ~
+b111 7
+b111 x
+b1011 ;
+b1011 {
+02
+0#
+#25
+0/
+b1011 f
+b1011 ,
+b1011 N
+1n
+x"
+b1 r
+b1 0
+b1 l
+b0 q
+b110 %"
+b110 .
+b110 }
+b111 #"
+b111 (
+b111 w
+b1011 !"
+b1011 !
+b1011 s
+b100 ""
+b100 %
+b100 u
+12
+1#
+#30
+b110 >
+b110 k
+b111 8
+b111 j
+b1011 1
+b1011 h
+b100 5
+b100 i
+02
+0#
+#35
+b1111 p
+b10000000000000000000000000000100 o
+b0 r
+b0 0
+b0 l
+b110 q
+b1011 f
+b1011 ,
+b1011 N
+12
+1#
+#40
+02
+0#
+#45
+b1011 f
+b1011 ,
+b1011 N
+b1111 p
+12
+1#
+#50
+02
+0#
+#55
+b1111 p
+b1011 f
+b1011 ,
+b1011 N
+12
+1#
+#60
+02
+0#

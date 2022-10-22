@@ -1,0 +1,290 @@
+$date
+	Thu Oct 20 19:58:49 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Exe_mem $end
+$var wire 16 ! ALU_output [15:0] $end
+$var wire 1 " checkwdata $end
+$var wire 1 # clkwire $end
+$var wire 4 $ instruction [3:0] $end
+$var wire 4 % ldst [3:0] $end
+$var wire 8 & npc [7:0] $end
+$var wire 4 ' regdest [3:0] $end
+$var wire 1 ( regnum $end
+$var wire 16 ) wdata [15:0] $end
+$var reg 16 * aluoutput [15:0] $end
+$var reg 1 + clk $end
+$var reg 8 , imm [7:0] $end
+$var reg 4 - inst [3:0] $end
+$var reg 4 . instructioni [3:0] $end
+$var reg 4 / ldsti [3:0] $end
+$var reg 4 0 linenum [3:0] $end
+$var reg 8 1 npci [7:0] $end
+$var reg 16 2 op1 [15:0] $end
+$var reg 16 3 op2 [15:0] $end
+$var reg 4 4 regdesti [3:0] $end
+$var reg 4 5 registernum [3:0] $end
+$scope module dut $end
+$var wire 16 6 aluoutput [15:0] $end
+$var wire 1 " checkwritedata $end
+$var wire 1 # clkwire $end
+$var wire 4 7 instruction [3:0] $end
+$var wire 4 8 linenum [3:0] $end
+$var wire 4 9 registernum [3:0] $end
+$var wire 1 ( regnum $end
+$var wire 16 : writedata [15:0] $end
+$var integer 32 ; a [31:0] $end
+$var reg 1 < checkbool $end
+$var integer 32 = fd [31:0] $end
+$var reg 5 > i [4:0] $end
+$var reg 4 ? regno [3:0] $end
+$var reg 16 @ val [15:0] $end
+$upscope $end
+$scope module dut2 $end
+$var wire 16 A ALU_output [15:0] $end
+$var wire 1 # clkwire $end
+$var wire 8 B imm [7:0] $end
+$var wire 4 C instruction [3:0] $end
+$var wire 4 D instructioni [3:0] $end
+$var wire 4 E ldst [3:0] $end
+$var wire 4 F ldsti [3:0] $end
+$var wire 8 G npc [7:0] $end
+$var wire 8 H npci [7:0] $end
+$var wire 16 I op1 [15:0] $end
+$var wire 16 J op2 [15:0] $end
+$var wire 4 K regdest [3:0] $end
+$var wire 4 L regdesti [3:0] $end
+$var reg 16 M ALU_result [15:0] $end
+$var reg 4 N instruction_reg [3:0] $end
+$var reg 4 O ldsti_reg [3:0] $end
+$var reg 4 P npc_reg [3:0] $end
+$var reg 4 Q regdesti_reg [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx Q
+bx P
+bx O
+bx N
+bx M
+b101 L
+bx K
+b1100 J
+b1010 I
+b1010 H
+b0xxxx G
+b1001 F
+bx E
+b0 D
+bx C
+b1111 B
+bx A
+bx @
+bx ?
+b10000 >
+b10000000000000000000000000000011 =
+0<
+b1 ;
+bx :
+bx 9
+bx 8
+bx 7
+bx 6
+bx 5
+b101 4
+b1100 3
+b1010 2
+b1010 1
+bx 0
+b1001 /
+b0 .
+bx -
+b1111 ,
+0+
+bx *
+bx )
+x(
+bx '
+b0xxxx &
+bx %
+bx $
+0#
+0"
+bx !
+$end
+#5
+b101 Q
+b101 '
+b101 K
+b1001 O
+b1001 %
+b1001 E
+b1010 P
+b1010 &
+b1010 G
+b10110 M
+b10110 !
+b10110 A
+b0 N
+b0 $
+b0 C
+1+
+1#
+#10
+b101 5
+b101 9
+b1001 0
+b1001 8
+b10110 *
+b10110 6
+b0 -
+b0 7
+0+
+0#
+b1 .
+b1 D
+b11 3
+b11 J
+b1100 2
+b1100 I
+#15
+1(
+b1001 M
+b1001 !
+b1001 A
+b1 N
+b1 $
+b1 C
+1<
+x"
+b1001 @
+b1001 )
+b1001 :
+b101 ?
+1+
+1#
+#20
+b1001 *
+b1001 6
+b1 -
+b1 7
+0+
+0#
+b10 .
+b10 D
+b111 3
+b111 J
+b100 2
+b100 I
+#25
+b11100 M
+b11100 !
+b11100 A
+b10 N
+b10 $
+b10 C
+1+
+1#
+#30
+b11100 *
+b11100 6
+b10 -
+b10 7
+0+
+0#
+b101 .
+b101 D
+b1110 3
+b1110 J
+b1110 2
+b1110 I
+#35
+b1111 P
+b1111 &
+b1111 G
+b0 M
+b0 !
+b0 A
+b101 N
+b101 $
+b101 C
+1+
+1#
+#40
+b0 *
+b0 6
+b101 -
+b101 7
+0+
+0#
+b110 .
+b110 D
+b10010 3
+b10010 J
+b10010 2
+b10010 I
+#45
+b1010 P
+b1010 &
+b1010 G
+b110 N
+b110 $
+b110 C
+1+
+1#
+#50
+b110 -
+b110 7
+0+
+0#
+b100 .
+b100 D
+b10001 2
+b10001 I
+#55
+b10001 M
+b10001 !
+b10001 A
+b100 N
+b100 $
+b100 C
+1+
+1#
+#60
+b10001 *
+b10001 6
+b100 -
+b100 7
+0+
+0#
+b11 .
+b11 D
+#65
+b1111 >
+b10000000000000000000000000000100 =
+b0 @
+b0 )
+b0 :
+b11 N
+b11 $
+b11 C
+1+
+1#
+#70
+b11 -
+b11 7
+0+
+0#
+#75
+b1000 @
+b1000 )
+b1000 :
+1+
+1#
