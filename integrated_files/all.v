@@ -29,6 +29,8 @@ wire [3:0] regnum,opcode_out;
 reg [3:0] registernum;
 reg[15:0] wdatareg;
 wire[15:0] wdataregw;
+integer i;
+reg done;
 
 assign wdataregw = wdatareg;
 assign clkwire = clk;
@@ -65,6 +67,8 @@ end
 
  initial 
     begin
+    i = -1;
+    done = 1'b0;
     clk = 1'b0;
     pc = 8'b0;
     // $dumpfile("dump4.vcd");
@@ -82,11 +86,12 @@ end
     // npc_in=8'b00000010; 
     // #10 
     // current_instruction=20'b01000110011100000000;
-    
-      #600 $finish;
+    #2000 $finish;
     end
 always @(negedge clk)
 begin
+    i = i-1;
+    //$display("i is",i);
     inst=instruction; //mem
     aluoutput = ALU_output; //mem
     linenum=ldst; //mem
@@ -108,7 +113,10 @@ begin
     reg7 = reg7_out;
     reg8 = reg8_out;
     current_instruction = ciwire;
-    
+    if((ciwire==20'b11100000000000000000)&&(done == 1'b0))
+    begin
+        i=5; done = 1'b1;
+    end
 // end
 
 // always @(negedge clk)
@@ -120,20 +128,19 @@ begin
     regdesti = dest_reg_wire;
     instructioni = instruction_4_bits;
     imm = instrwire;
-    $display("time : ", $time);
-    $display("IF:");
-    $display("current instruction is %b", current_instruction );
-    $display("ID:");
-    $display("dest_reg %b",dest_reg_wire, " data_1 is ", reg_data_1_wire, " data_2 is ", reg_data_2_wire,  " instrwire ", instrwire);
-    $display("memory line num for load/store: %b", memwire);
-    $display("EX:");
-    $display("Opcode out is ", instruction, "Alu output is ", ALU_output, " to be written is register", regdest, " load/store line num is ", ldst, " jump_address is ", jump_address);
-    $display("MU:");
+    $display("time: %d", $time);
+    $display("IF: current instruction is %b", current_instruction );
+    $display("ID: Destination Reg %b",dest_reg_wire, " Data1 is ", reg_data_1_wire, " Data2 is ", reg_data_2_wire,  " instrwire ", instrwire);
+    $display("      memory line num for load/store: %b", memwire);
+    $display("EX: Opcode out is ", instruction, "Alu output is ", ALU_output, " to be written is register", regdest, " load/store line num is ", ldst, " jump_address is ", jump_address);
+    $display("MU: Write data is", wdata, " to be written in register ", regnum, "checkbool is ", checkwdata);
     // $display("opcode: %b", instruction_4_bits, "instr: %b", instrwire);
-    $display("wdata is", wdata, " to be written in register ", regnum, "checkbool is ", checkwdata);
+   
     // $display("Writeback unit");
     // $display("New registers are ", reg1, reg2, reg3, reg4, reg5, reg6, reg7, reg8);
     $display();
+    $display();
+    if(i==0) $finish;
 end
     //always @(negedge clk)
     // begin
